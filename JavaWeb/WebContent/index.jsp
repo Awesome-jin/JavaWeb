@@ -9,7 +9,7 @@
 <body>
 	<a href = "./parameter/input.jsp">parameter</a> <!-- 같은 디렉토리 내에 있다면 ./ ../ 불필요 -->
 	<br/>
-	<a href = "./out/out.jsp"> out 객체 이용</a><br/>
+	<a href = "./parameter/out/out.jsp"> out 객체 이용</a><br/>
 	<a href = "./app/application.jsp"> application 객체</a><br/>
 	<a href = "./result/input.jsp">포워딩과 리다이렉트의 차이</a>
 	
@@ -22,7 +22,7 @@
 	
 		//파일에 기록 할 수 있는 객체 생성
 		PrintWriter pw = new PrintWriter(
-				new FileOutputStream("C:\\Users\\admin\\Documents" + filename+".log", true)); //파일이 없으면 생성하고 있으면 뒤에 이어 붙이도록 생성
+				new FileOutputStream("C:\\Users\\admin\\Documents\\" + filename+ ".log", true)); //파일이 없으면 생성하고 있으면 뒤에 이어 붙이도록 생성
 				
 		//접속한 IP주소 가져오기
 		String ip = request.getRemoteAddr();
