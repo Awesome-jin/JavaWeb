@@ -10,8 +10,7 @@
 	<a href="./cookie/cookiecreate.jsp"> 쿠키 생성 이동 </a><br/>
 	<a href="./cookie/login.jsp"> 쿠키로 아이디를 저장하기</a><br/>
 	<a href = "./webstorage/login.jsp">웹 스토리지를 이용한 아이디 저장</a><br/>
-	
-	
+	<a href = "./error/input.jsp">에러 페이지 처리</a><br/>
 	<div id="content">
 	<% 
 	// 로그인 안되어 있는 경우 >> 로그인이 되었으면 로그아웃으로 바꿔줘야 함
