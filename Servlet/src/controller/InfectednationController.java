@@ -85,6 +85,19 @@ public class InfectednationController extends HttpServlet {
 			
 			dispatcher = request.getRequestDispatcher("../views/disp.jsp");
 			dispatcher.forward(request, response);
+			
+			//jstl 페이지 기능 추가
+		}else if(command.equals("/el/jstl") && method.equals("GET")) {
+			//어느 페이지로 이동시킬 건지 추가해주기
+			dispatcher = request.getRequestDispatcher("../views/jstl.jsp");
+			dispatcher.forward(request, response);
+		}else if(command.equals("/nation/list")&&method.equals("GET")) {
+			// 데이터를 검색해서 조회해야 하는 경우는 데이터를 검색하고 그 결과를 request에 저장
+			// 결과를 포워딩 해주면 된다.
+			List <infectednation> list = nationlist.list(request); //nationlist는 위에서만든 private 변수
+			request.setAttribute("list", list);
+			dispatcher = request.getRequestDispatcher("../views/list.jsp");
+			dispatcher.forward(request, response);
 		}
 	}
 
